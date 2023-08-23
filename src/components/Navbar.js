@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/logo.svg";
-import {pageLinks}  from '../data';
+import { pageLinks, socialLinks } from "../data";
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -12,81 +12,32 @@ const Navbar = () => {
           </button>
         </div>
 
-
         {/* <!-- left this comment on purpose --> */}
-        <ul>
-
-
-
+        <ul className="nav-links">
+          {pageLinks.map((link) => {
+            return (
+              <li key={link.id}>
+                <a href={link.href} className="nav-link">
+                  {link.text}
+                </a>
+              </li>
+            );
+          })}
         </ul>
-              {pageLinks.map((link)=>
-              {
-                return (
-                <li>
-
-                    <a>
-                    {pageLinks.map((link)=>
-              {
-                return (
-                <li>
-
-                    <a>
-
-
-                    </a>
-
-                </li>
 
 
 
-                )
-
-})}
-
-                    </a>
-
-                </li>
-
-
-
-                )
-
-
-              })}
+            <ul>
+              
+            </ul>
 
 
 
 
-        <ul className="nav-links" id="nav-links">
-          
-       <li>
-            <a href="#home" className="nav-link">
-              {" "}
-              home{" "}
-            </a>
-          </li>
 
-          <li>
-            <a href="#about" className="nav-link">
-              {" "}
-              about{" "}
-            </a>
-          </li>
 
-          <li>
-            <a href="#services" className="nav-link">
-              {" "}
-              services{" "}
-            </a>
-          </li>
 
-          <li>
-            <a href="#tours" className="nav-link">
-              {" "}
-              tours
-            </a>
-          </li>
-        </ul>
+
 
         <ul className="nav-icons">
           <li>
