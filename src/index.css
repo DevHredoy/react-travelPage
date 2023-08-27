@@ -459,7 +459,7 @@ Navbar
   align-items: center;
 }
 .nav-icons {
-  display: none;
+  /* display: none; */
 }
 .nav-center {
   width: 90vw;
